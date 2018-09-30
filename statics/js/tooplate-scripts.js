@@ -77,7 +77,7 @@ function drawBarChart() {
             },
             scaleLabel: {
               display: true,
-              labelString: "Hits"
+              labelString: "Quantidade"
             }
           }
         ]
@@ -90,10 +90,10 @@ function drawBarChart() {
     configBar = {
       type: "bar",
       data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        labels: ["NDVI", "PH", "Calcio", "Argila", "Nitrato", "Fosfato"],
         datasets: [
           {
-            label: "# of Hits",
+            label: "NDVI",
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
               "rgba(255, 99, 132, 0.2)",
