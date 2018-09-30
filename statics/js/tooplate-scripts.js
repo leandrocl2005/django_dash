@@ -35,7 +35,7 @@ function drawLineChart() {
         datasets: [
           {
             label: "Latest Hits",
-            data: [88, 68, 79, 57, 56, 55, 70],
+            data: [88, 68, 79, 57, 56, 55, 10],
             fill: false,
             borderColor: "rgb(75, 192, 192)",
             lineTension: 0.1
@@ -122,12 +122,17 @@ function drawBarChart() {
   }
 }
 
-function drawPieChart() {
+function drawPieChart(word) {
   if ($("#pieChart").length) {
     ctxPie = document.getElementById("pieChart").getContext("2d");
+
     optionsPie = {
       responsive: true,
-      maintainAspectRatio: false
+      maintainAspectRatio: false,
+      title: {
+          display: true,
+          text: word
+      }
     };
 
     configPie = {
@@ -135,7 +140,7 @@ function drawPieChart() {
       data: {
         datasets: [
           {
-            data: [4600, 5400],
+            data: [1600, 8400],
             backgroundColor: [
               window.chartColors.purple,
               window.chartColors.green
@@ -143,7 +148,7 @@ function drawPieChart() {
             label: "Storage"
           }
         ],
-        labels: ["Used: 4,600 GB", "Available: 5,400 GB"]
+        labels: ["Used: 1,600 GB", "Available: 8,400 GB"]
       },
       options: optionsPie
     };
